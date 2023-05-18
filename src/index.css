@@ -1,13 +1,2657 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: rgb(9, 30, 66);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  /* min-width: 320px; */
+  font-family: "Charlie Text", sans-serif;
+  /* font-size: 1.25rem; */
+  width: 100%;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body a {
+  color: rgb(0, 82, 204);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+h1,
+.h1 {
+  font-family: var(--font-family-display, "Charlie Display", sans-serif);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0px;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+
+  h1,
+  .h1 {
+    font-size: 2.75rem;
+    line-height: 1.18182;
+  }
+}
+
+@media (min-width: 992px) {
+
+  h1,
+  .h1 {
+    font-size: 3rem;
+    line-height: 1.25;
+  }
+}
+
+h2,
+.h2 {
+  /* font-family: var(--font-family-display, "Charlie Display", sans-serif); */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0px;
+  font-size: 1.5rem;
+  line-height: 1.33333;
+}
+
+@media only screen and (min-width: 768px) {
+
+  h2,
+  .h2 {
+    font-size: 2.25rem;
+    line-height: 1.33333;
+  }
+}
+
+h3,
+.h3 {
+  font-family: var(--font-family-display, "Charlie Display", sans-serif);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 768px) {
+
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .App a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .App a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media (min-width: 1200px) {
+  .App a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.banner-container,
+.tab-container,
+.ipad-101-container,
+.trello-action-container,
+.trello-usecase,
+.trello-views-container,
+.trello-title,
+.trello-features-container,
+.trello-comments-container,
+.trello-teams-container,
+.trello-started-container,
+.footer-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+#features, #workflows, #views, #plans, #survey {
+    transition: 0.7s ease 0s;
+    scroll-margin-top: 72px;
+}
+
+@media (min-width: 576px) {
+
+  .banner-container,
+  .tab-container,
+  .ipad-101-container,
+  .trello-action-container,
+  .trello-usecase,
+  .trello-views-container,
+  .trello-title,
+  .trello-features-container,
+  .trello-comments-container,
+  .trello-teams-container,
+  .trello-started-container,
+  .footer-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .banner-container,
+  .tab-container,
+  .ipad-101-container,
+  .trello-action-container,
+  .trello-usecase,
+  .trello-views-container,
+  .trello-title,
+  .trello-features-container,
+  .trello-comments-container,
+  .trello-teams-container,
+  .trello-started-container,
+  .footer-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .banner-container,
+  .tab-container,
+  .ipad-101-container,
+  .trello-action-container,
+  .trello-usecase,
+  .trello-views-container,
+  .trello-title,
+  .trello-features-container,
+  .trello-comments-container,
+  .trello-teams-container,
+  .trello-started-container,
+  .footer-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .banner-container,
+  .tab-container,
+  .ipad-101-container,
+  .trello-action-container,
+  .trello-usecase,
+  .trello-views-container,
+  .trello-title,
+  .trello-features-container,
+  .trello-comments-container,
+  .trello-teams-container,
+  .trello-started-container,
+  .footer-container {
+    max-width: 1140px;
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem 4rem;
+}
+
+.logo-img {
+  /* flex-grow: 1; */
+}
+
+.menu-container {
+  flex-grow: 2;
+  display: flex;
+}
+
+.menu-container li {
+  list-style: none;
+  padding: 0 2rem;
+}
+
+.menu-container li a {
+  color: #99ADB7;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-container a {
+  color: #99ADB7;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*****  Trello banner  *****/
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .banner-section {
+    background: url(https://images.ctfassets.net/rz1oowkt5gyp/6bFuTiN5YQ78rFkHb3aJlo/b608362b08e14f5dec4c4aeea3a3ca72/white-wave-mobile.svg) center bottom -0.5px / 100% 24% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto no-repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-section {
+    background: url(https://images.ctfassets.net/rz1oowkt5gyp/6bFuTiN5YQ78rFkHb3aJlo/b608362b08e14f5dec4c4aeea3a3ca72/white-wave-mobile.svg) center bottom -0.5px / 100% 24% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto no-repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .banner-section {
+    background: url(//images.ctfassets.net/rz1oowkt5gyp/7lTGeXbBRNRLaVk2MdBjtJ/99c266e…/white-wave-bg.svg) center bottom -0.5px / 100% 14% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal;
+    color: rgb(255, 255, 255);
+  }
+} 
+
+@media only screen and (min-width: 992px) {
+  .banner-section {
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .banner-section {
+    background: url(https://images.ctfassets.net/rz1oowkt5gyp/7lTGeXbBRNRLaVk2MdBjtJ/99c266ed4cb8cc63bd0c388071f01ff6/white-wave-bg.svg) center bottom -0.5px / 100% 14% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal;
+    color: #ffffff;
+  }
+}
+
+.banner-wrapper {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.banner-text {
+  padding: 8rem 1rem 1rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  text-align: center;
+  width: 100%;
+  margin-top: 0px;
+}
+
+@media (min-width: 992px) {
+  .banner-text {
+    text-align: left;
+    display: block;
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 0px;
+    padding-bottom: 8rem;
+  }
+}
+
+.spacer-05 {
+  height: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .spacer-05 {
+    height: 0.5rem;
+  }
+}
+
+/* .text-block h1 {
+  font-size: 3rem;
+  line-height: 1.25;
+} */
+
+.form-container {
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-container {
+    display: inline-flex;
+    -webkit-box-pack: start;
+    justify-content: start;
+  }
+}
+
+.form-input {
+  font-size: 1rem;
+  padding: 0.7rem 0.75rem 0.8rem;
+  border: 1px solid rgb(223, 225, 230);
+  border-radius: 0.3rem;
+  max-width: 300px;
+  transition: all 250ms ease-out 0s;
+  width: 375px;
+}
+
+.form-submit {
+  display: inline-block;
+}
+
+@media (max-width: 767.98px) {
+  .form-submit {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+  }
+}
+
+.form-submit a,
+.form-submit>span {
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  text-decoration: none;
+  background-color: rgb(0, 101, 255);
+  border: 1px solid rgb(0, 101, 255);
+  font-size: 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  color: rgb(255, 255, 255) !important;
+}
+
+@media (max-width: 767.98px) {
+
+  .form-container a,
+  .form-container>div button {
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+
+.watch-vd {
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+  .watch-vd {
+    margin-left: 1rem;
+    margin-top: 0px;
+  }
+}
+
+.vd-link a span,
+.vd-link>span span {
+  display: inline-block;
+}
+
+.vd-link a,
+.vd-link>span {
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  font-size: 1rem;
+}
+
+.vd-link a svg,
+.vd-link>span svg {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-top: 2px;
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform 250ms ease-out 0s;
+}
+
+.banner-image {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: -1rem;
+  z-index: 1;
+  scroll-margin-top: 72px;
+}
+
+@media (min-width: 768px) {
+  .banner-image {
+    margin-bottom: -0.5rem;
+    padding-bottom: 1rem;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner-image {
+    display: block;
+    flex: 0 0 auto;
+    width: 58.3333%;
+    margin-top: 0px;
+    padding-top: 8rem;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: -16.6667%;
+    left: 16.6667%;
+  }
+}
+
+.banner-image img {
+  width: 100%;
+}
+
+/* .form-submit button {
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  text-decoration: none;
+  background-color: rgb(0, 101, 255);
+  border: 1px solid rgb(0, 101, 255);
+  font-size: 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  color: #ffffff;
+} */
+
+/*****  Trello 101  *****/
+
+.trello-101-container {
+  background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(178, 212, 255);
+  background-blend-mode: normal;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .trello-101-container {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(178, 212, 255);
+    background-blend-mode: normal;
+    color: rgb(9, 30, 66);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .trello-101-container {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(178, 212, 255);
+    background-blend-mode: normal;
+    color: rgb(9, 30, 66);
+  }
+}
+
+.trello-title-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .trello-title-wrapper {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .trello-title-wrapper {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .trello-title-wrapper {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .trello-title-wrapper {
+    max-width: 1140px;
+  }
+}
+
+.trello-title-header {
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+/* @media (min-width: 768px) {
+  .trello-title-header {
+    text-align: left;
+    order: 1;
+    display: block;
+    flex: 0 0 auto;
+    width: 58.3333%;
+  }
+}  */
+
+/* .trello-title-header {
+    padding: 1rem;
+    position: relative;
+    scroll-margin-top: 72px;
+    text-align: center;
+    width: 100%;
+    order: 3;
+  } */
+
+/* .trello-title {
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  } */
+
+
+/* .trello-title {
+  padding: 1rem;
+  max-width: 1140px;
+  margin: 0 auto;
+} */
+
+/* .trello-title {
+    padding: 1rem;
+    position: relative;
+    scroll-margin-top: 72px;
+    text-align: center;
+    width: 100%;
+  } */
+
+/* @media (min-width: 768px) {
+  .trello-title {
+    text-align: left;
+    display: block;
+    flex: 0 0 auto;
+    width: 58.3333%;
+  }
+}  */
+
+.trello-p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0px;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.trello-title h2 {
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .trello-title h2 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+/*****  Trello 101 tab  *****/
+
+@media (max-width: 576px) {
+  .trello-action-container .slider-container {
+    margin-right: -1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .trello-action-container .slider-container {
+    overflow: hidden;
+    margin-right: -2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container .slick-list {
+    width: 83.33%;
+  }
+}
+
+.react-tabs {
+  display: flex;
+  width: 100%;
+  /* border: 1px solid #3c3e43; */
+  color: white;
+  /* background: #1c1d1f; */
+  padding-bottom: 5rem;
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  margin: 0;
+  padding: 0 1rem 0 0;
+  color: white;
+  gap: 1rem;
+  /* background: #3c3e43; */
+}
+
+.react-tabs__tab-list p {
+  font-size: 1rem;
+}
+
+.react-tabs__tab {
+  list-style: none;
+  padding: 12px 6px;
+  cursor: pointer;
+  color: #091e42;
+}
+
+.react-tabs__tab h3 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.react-tabs__tab p {
+  margin: 0;
+}
+
+.react-tabs__tab--selected {
+  background: #ffffff;
+  border-color: #1c1d1f;
+  border-left: 0.5rem solid #00c7e5;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  color: #091e42;
+  box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+  padding: 1rem 1rem 1rem 1.5rem;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+  width: 66.66%;
+  padding: 0 0 1rem 1rem;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.react-tabs__tab {
+  padding-left: 24px;
+}
+
+.react-tabs__tab--selected {
+  padding-left: 21px;
+}
+
+.panel-content {
+  text-align: center;
+}
+
+.panel-content img {
+  width: 100%;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+/*****  Trello action  *****/
+
+.trello-action {
+  padding: 4rem 0 0;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  padding: 1rem 0 4rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: red !important;
+}
+
+.slick-prev,
+.slick-next {
+  position: relative !important;
+  top: 0;
+}
+
+.slick-prev {
+  left: 94% !important;
+}
+
+.slick-next {
+  position: absolute !important;
+  top: 0 !important;
+  right: 1% !important;
+}
+
+button.arrowStyle.prev-arrow {
+  position: relative;
+  left: 92% !important;
+  margin-bottom: 1rem;
+}
+
+@media (max-width:768px) {
+
+  button.arrowStyle.prev-arrow,
+  button.arrowStyle.next-arrow {
+    display: none;
+  }
+}
+
+button.arrowStyle.next-arrow {
+  position: absolute !important;
+  top: 0 !important;
+  right: 1% !important;
+}
+
+.arrowStyle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+.arrowStyle svg {
+  fill: #f4f5f7;
+}
+
+.arrowStyle svg path {
+  stroke: #7a869a;
+}
+
+.arrowStyle:hover svg path {
+  stroke: rgb(0, 184, 217);
+}
+
+.slick-list {
+  overflow: visible !important;
+}
+
+.ipad-101-container .slick-list {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slider-container .slick-slide {
+  margin: 0 0.3rem;
+  width: 16.2% !important;
+  height: auto !important;
+  display: flex !important;
+  padding: 0.5rem;
+}
+
+.slider-container .slick-slide:nth-child(3) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
+.slider-container .slick-slide:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .slider-container .slick-slide {
+    margin: 0 0.5rem;
+    padding: 1rem;
+  }
+}
+
+.slick-slide.slick-active:last-child {
+  margin-right: 0;
+}
+
+.ipad-101-container {
+  overflow: hidden;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .ipad-101-container {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .tab-container {
+    display: none;
+  }
+}
+
+.panel-img {
+  margin: 1rem;
+}
+
+.ipad-panel-content {
+  background: #ffffff;
+  border-color: #1c1d1f;
+  border-left: 0.5rem solid #00c7e5;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  color: #091e42;
+  /* box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px; */
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin: 1rem;
+  height: 100%;
+}
+
+.ipad-101-container .slick-slider {
+  padding-bottom: 6rem;
+}
+
+.ipad-101-container .slick-track {
+  /* gap: 1rem; */
+}
+
+.ipad-101-container .slick-slide {
+  display: flex !important;
+  height: auto;
+}
+
+.ipad-101-container .slick-slide .panel-container {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.ipad-101-container .slick-slide img {
+  display: block;
+  width: 100%;
+  /* padding: 1rem; */
+}
+
+.ipad-101-container button {
+  display: none;
+  visibility: hidden;
+}
+
+.ipad-101-container .slick-dots {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100% !important;
+}
+
+.ipad-101-container .slick-dots ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+/***** Trello actions  *****/
+
+.action-workflows {
+  display: block;
+  flex: 0 0 auto;
+  width: 33.3333%;
+  position: relative;
+  scroll-margin-top: 72px;
+  text-align: left;
+  height: 100%;
+}
+
+.action-link {
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+  color: #091e42 !important;
+  display: block;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  user-select: none;
+  white-space: normal;
+  width: auto;
+}
+
+.color-bar1 {
+  height: 3rem;
+  background: #FF7452;
+}
+
+.color-bar2 {
+  height: 3rem;
+  background: #2684ff;
+}
+
+.color-bar3 {
+  height: 3rem;
+  background: #57D9A3;
+}
+
+.color-bar4 {
+  height: 3rem;
+  background: #FFC303;
+}
+
+.color-bar5 {
+  height: 3rem;
+  background: #02C7E5;
+}
+
+.color-bar6 {
+  height: 3rem;
+  background: #F99CDB;
+}
+
+.action-content {
+  padding: 2.25rem 1.5rem 1.5rem;
+  position: relative;
+}
+
+.action-icon {
+  background-color: rgb(255, 255, 255);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 8px;
+  height: 3rem;
+  left: 1rem;
+  position: absolute;
+  top: -1.5rem;
+  width: 3rem;
+}
+
+.action-icon1 {
+  background-image: url(https://images.ctfassets.net/rz1oowkt5gyp/5Oc1c9iIDmXtUFHs0uWuLQ/cef21b3212ac080d9d0adad649dc31e9/icon-content-folder_2x.png);
+}
+
+.action-icon2 {
+  background-image: url(https://images.ctfassets.net/rz1oowkt5gyp/5j0J5BEzFktzLYnsszcJWc/be9270f9ea1e9bb3c69a799e54ef9fea/icon-object-megaphone_2x.png);
+}
+
+.action-icon3 {
+  background-image: url(https://images.ctfassets.net/rz1oowkt5gyp/5JwPiAFuOJCWEdYiTqlfs3/ca86f7f918d09a1782284ba4578a28ec/icon-object-leaf_2x.png);
+}
+
+.action-icon4 {
+  background-image: url(https://images.ctfassets.net/rz1oowkt5gyp/4Mgm4SG6P6bD673rMtNpXP/9f8798510480b30d296550be747b9624/icon-content-checklists_2x.png);
+}
+
+.action-icon5 {
+  background-image: url(https://images.ctfassets.net/rz1oowkt5gyp/x2AI5JZPTDVY7BxKbvClM/dc65b20bf0914caa72bcaf2ddbb05d9b/UseCasesBrainstorming.svg);
+}
+
+.action-icon6 {
+  background-image: url(https://images.ctfassets.net/rz1oowkt5gyp/5rv4eidOfMf1vdEzVpHNlA/bb102f380f9cfd3d1761858d8910963d/icon-object-book_2x.png);
+}
+
+.action-content p {
+  font-size: 1rem;
+  margin: 0px;
+}
+
+.btn-usecase {
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 101, 255);
+  font-size: 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  color: rgb(23, 43, 77) !important;
+}
+
+.trello-usecase-wrapper {
+  -webkit-box-align: stretch;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-bottom: 5rem;
+}
+
+.trello-usecase-text {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+@media (max-width: 768px) {
+
+  .trello-usecase-text,
+  .trello-usecase-link {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .trello-usecase-wrapper {
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.trello-usecase-text p {
+  margin: 0;
+}
+
+.trello-usecase-link {
+  flex: 0 0 auto;
+  width: 25%;
+  text-align: right;
+}
+
+/*****  Trello views  *****/
+.trello-views {
+  background: url(https://images.ctfassets.net/rz1oowkt5gyp/7KgS3XVFhGu3TiclJKloEp/c10aad15fb171a6c245db9cb7910247d/ViewsBackground_Left_Narrow.svg) left center / contain no-repeat scroll padding-box border-box, url(https://images.ctfassets.net/rz1oowkt5gyp/2HisRmboWIdXSYaaUSDzon/dadecff4be8a39bf2cf3cc537bd4d9c1/ViewsBackground_Right_Narrow.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(240deg, rgb(0, 184, 217), rgb(0, 101, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(0, 101, 255);
+  background-blend-mode: normal, normal, normal;
+  color: rgb(255, 255, 255);
+}
+
+.trello-views-wrapper {
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.trello-views-header {
+  display: block;
+  flex: 0 0 auto;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.trello-views-section {
+  padding: 1rem 1rem 3rem;
+  position: relative;
+}
+
+.trello-views-section2 {
+  margin-bottom: -8rem;
+  padding: 1rem;
+}
+
+.trello-views-row {
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(9, 30, 66);
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .trello-views-row {
+    flex-direction: row;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .trello-views-section2 .trello-views-row {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 992px) {
+  .trello-views-image {
+    width: 55%;
+  }
+}
+
+.trello-views-image img {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .trello-views-info {
+    padding: 0px 2rem;
+    width: 45%;
+  }
+}
+
+.trello-views-title {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.trello-views-icon {
+  color: rgb(135, 119, 217);
+  display: block;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .trello-views-icon {
+    display: block;
+  }
+}
+
+.trello-views-icon svg {
+  display: block;
+  height: auto;
+  width: 2rem;
+}
+
+.trello-views-row a {
+  color: rgb(0, 82, 204);
+}
+
+/*****  Trello features  *****/
+
+
+@media only screen and (min-width: 768px) {
+  .spacer-8 {
+    height: 8rem;
+  }
+}
+
+.spacer-8 {
+  height: 8rem;
+}
+
+
+  .spacer-3 {
+    height: 3rem;
+  }
+
+/*****  Trello features  *****/
+
+.space-2 {
+  height: 2rem;
+}
+
+@media (min-width: 768px) {
+  .space-2 {
+    height: 3rem;
+  }
+}
+
+.trello-title {
+  padding: 1rem;
+}
+
+.trello-features-row {
+  align-items: stretch;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .trello-features-col1,
+  .trello-features-col2 {
+    padding: 1rem;
+    position: relative;
+    scroll-margin-top: 72px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .trello-features-col1,
+  .trello-features-col2 {
+    display: block;
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  .trello-features-col1,
+  .trello-features-col2 {
+    display: block;
+    flex: 0 0 auto;
+    width: 33.3333%;
+    padding: 1rem;
+  }
+}
+
+.trello-features-col3 {
+  padding: 1rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  width: 100%;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .trello-features-col3 {
+    margin-left: 25%;
+    display: block;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .trello-features-col3 {
+    margin-left: 0%;
+    display: block;
+    flex: 0 0 auto;
+    width: 33.3333%;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .trello-features-col3 {
+    padding: 1rem;
+    position: relative;
+    scroll-margin-top: 72px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+.trello-features-info {
+  padding: 1.5rem;
+  height: 100%;
+  background-color: rgb(250, 251, 252);
+  color: rgb(9, 30, 66);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.trello-features-info-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.trello-features-text {
+  font-size: 1rem;
+}
+
+.trello-features-link a {
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 101, 255);
+  font-size: 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  color: rgb(23, 43, 77) !important;
+}
+
+/*****  Trello comments  *****/
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .trello-comments {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+} 
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .trello-comments {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .trello-comments {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+} 
+
+@media only screen and (min-width: 1200px) {
+  .trello-comments {
+    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+}
+
+.trello-comments-wrapper {
+  padding-bottom: 3rem;
+}
+
+/* .trello-comments-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 2rem;
+} */
+
+.comments-slider-container .slick-list {
+  z-index: 10;
+}
+
+.comments-slider-container .slick-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+.comments-container {
+  height: 100%;
+}
+
+.comments-slider-layout {
+  cursor: grab;
+  gap: 16px;
+  margin-left: 0px;
+  transition: margin-left 0.3s ease 0s;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  display: flex;
+  height: 100%;
+}
+
+.comments-slider-slide {
+  box-sizing: content-box;
+  user-select: none;
+  width: 100%;
+}
+
+.comments-slider-slidelayout {
+  height: 100%;
+  padding: 1px 0.5rem 0.5rem;
+}
+
+.comments-slider-row {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  height: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  overflow: hidden;
+  text-align: left;
+}
+
+@media only screen and (min-width: 992px) {
+  .comments-slider-row {
+    flex-direction: row;
+  }
+}
+
+.comments-slider-container .slick-list {
+  overflow: hidden !important;
+}
+
+.comments-slider-container .slick-dots {
+  position: absolute;
+  top: 0.8rem;
+  display: block;
+  width: 90% !important;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: right !important;
+  /* z-index: -100; */
+}
+
+@media (max-width: 991px) {
+  .comments-slider-container .slick-dots {
+    width: 100% !important;
+    position: relative;
+    top: 1.5rem;
+  }
+
+  .slick-dots ul {
+    justify-content: center !important;
+    padding: 0;
+  }
+
+  .comments-slider-container button {
+    display: none !important;
+  }
+}
+
+.slick-dots li div {
+  width: 0.5rem !important;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  border: 0;
+  background-color: currentColor;
+  color: inherit;
+  margin: 0;
+}
+
+.slick-dots ul {
+  display: flex;
+  justify-content: end;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem !important;
+  margin: 0 0.5rem !important;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active {
+  width: 3.75rem !important;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: currentcolor;
+  opacity: 0.5;
+}
+
+.comments-slider-container .slick-next,
+.comments-slider-container .slick-prev {
+  top: -0.8rem !important;
+}
+
+.comments-client {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0px;
+  padding: 2rem;
+  /* background-image: url(data:image/svg+xml, %3Csvg fill='none' height='272' width='773' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M351.53 186.369c0-53.88-28.777-83.707-84.412-83.707h-.96c11.511-29.826 48.921-45.22 97.842-48.107V-33c-126.619 6.735-196.643 77.934-196.643 185.694 0 85.631 40.288 119.306 94.964 119.306 54.677 0 89.209-32.713 89.209-85.631Zm-203.357 0c0-53.88-28.777-83.707-84.413-83.707h-.959c11.51-29.826 48.921-45.22 97.842-48.107V-33C34.024-26.265-36 44.934-36 152.694-36 238.325 4.288 272 58.964 272s89.209-32.713 89.209-85.631Z' fill='url(%23b)' opacity=' .15' /%3E%3Cdefs%3E%3ClinearGradient id=' b' x1=' 290.667' y1=' -33' x2=' 141.42' y2=' 307.405' gradientUnits=' userSpaceOnUse' %3E%3Cstop stop-color=' %23f99cdb' /%3E%3Cstop stop-color=' %236554c0' offset=' 1' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E); */
+  background-image: url("data:image/svg+xml, %3Csvg fill='none' height='272' width='773' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M351.53 186.369c0-53.88-28.777-83.707-84.412-83.707h-.96c11.511-29.826 48.921-45.22 97.842-48.107V-33c-126.619 6.735-196.643 77.934-196.643 185.694 0 85.631 40.288 119.306 94.964 119.306 54.677 0 89.209-32.713 89.209-85.631Zm-203.357 0c0-53.88-28.777-83.707-84.413-83.707h-.959c11.51-29.826 48.921-45.22 97.842-48.107V-33C34.024-26.265-36 44.934-36 152.694-36 238.325 4.288 272 58.964 272s89.209-32.713 89.209-85.631Z' fill='url(%23b)' opacity='.15' /%3E%3Cdefs%3E%3ClinearGradient id='b' x1='290.667' y1='-33' x2='141.42' y2='307.405' gradientUnits='userSpaceOnUse' %3E%3Cstop stop-color='%23f99cdb' /%3E%3Cstop stop-color='%236554c0' offset='1' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 992px) {
+  .comments-client {
+    width: 66.66%;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.quote-section {
+  font-size: 1.5rem;
+  margin: 0px;
+}
+
+.quote-info {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .quote-info {
+    padding-top: 3.25rem;
+  }
+}
+
+.quote-info::before {
+  background-color: currentcolor;
+  content: "";
+  display: block;
+  height: 1px;
+  margin-bottom: 1rem;
+  max-width: 9rem;
+}
+
+.quote-info p {
+  margin: 0;
+}
+
+.quote-img-link {
+  margin-top: auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .quote-img-link {
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+.quote-img-link img {
+  max-height: 2.25rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.quote-img-link img,
+.quote-img-link a {
+  display: block;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+
+  .quote-img-link img,
+  .quote-img-link a {
+    margin-top: 1.5rem;
+  }
+}
+
+.product-survey {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0px;
+  padding: 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .product-survey {
+    background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
+    background-blend-mode: normal;
+    color: rgb(255, 255, 255);
+  }
+} 
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-survey {
+    background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
+    background-blend-mode: normal;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .product-survey {
+    padding: 2.5rem 2rem;
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .product-survey {
+    background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
+    background-blend-mode: normal;
+    color: rgb(255, 255, 255);
+  }
+} 
+
+@media only screen and (min-width: 1200px) {
+  .product-survey {
+    background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
+    background-blend-mode: normal;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.product-survey h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.33333;
+  margin: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .product-survey h3 {
+    font-size: 2.25rem;
+    line-height: 1.33333;
+  }
+}
+
+.product-factlink {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .product-factlink {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-survey a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/*****  Trello plans  *****/
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .trello-plans {
+    background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .trello-plans {
+    background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .trello-plans {
+    background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+} 
+
+@media only screen and (min-width: 1200px) {
+  .trello-plans {
+    background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background-blend-mode: normal;
+  }
+}
+
+.trello-plans-header {
+  display: block;
+  flex: 0 0 auto;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-plans a,
+.btn-plans>span {
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  text-decoration: none;
+  background-color: rgb(0, 101, 255);
+  border: 1px solid rgb(0, 101, 255);
+  font-size: 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  color: rgb(255, 255, 255) !important;
+}
+
+@media (min-width: 1200px) {
+  .trello-plans-container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+
+.trello-plans-section {
+  padding: 1rem 1rem 3rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .trello-plans-section {
+    padding: 1rem 0 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .trello-plans-section {
+    margin-bottom: 0px;
+    padding-bottom: 5rem;
+  }
+}
+
+/* .trello-plans-row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 992px) {
+  .trello-plans-row {
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+  }
+} */
+
+@media (max-width: 992px) {
+  .trello-plans-row {
+    display: none;
+  }
+}
+
+.trello-plans-ipad-row {
+  margin: 0 1rem 1rem;
+}
+
+@media (min-width: 992px) {
+  .trello-plans-ipad-row {
+    display: none;
+  }
+}
+
+.trello-plans-free,
+.trello-plans-standard,
+.trello-plans-premium,
+.trello-plans-enterprise {
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem 1rem;
+  text-align: left;
+  border: 1px solid rgb(223, 225, 230);
+  display: flex;
+  flex-direction: column;
+}
+
+.trello-plans-name,
+.trello-plans-price,
+.plans-description,
+.plans-btn,
+.plans-info {
+  display: flex;
+}
+
+.plan-name {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0px;
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem 1rem 0px;
+  text-align: left;
+  border-left: 1px solid rgb(223, 225, 230);
+  border-right: 1px solid rgb(223, 225, 230);
+  border-top: 1px solid rgb(223, 225, 230);
+}
+
+.plan-name-premium {
+  border-left: 2px solid rgb(0, 184, 217);
+  border-right: 2px solid rgb(0, 184, 217);
+  border-top: 2px solid rgb(0, 184, 217);
+}
+
+.plans-price-col-premium,
+.description-premium,
+.free-link-premium {
+  border-left: 2px solid rgb(0, 184, 217) !important;
+  border-right: 2px solid rgb(0, 184, 217) !important;
+}
+
+.plan-info-link-premium {
+  border-left: 2px solid rgb(0, 184, 217) !important;
+  border-right: 2px solid rgb(0, 184, 217) !important;
+  border-bottom: 2px solid rgb(0, 184, 217) !important;
+}
+
+.plans-price-col,
+.description,
+.free-link {
+  font-size: 1rem;
+  margin: 0px;
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem 1rem 0px;
+  text-align: left;
+  border-left: 1px solid rgb(223, 225, 230);
+  border-right: 1px solid rgb(223, 225, 230);
+}
+
+.plan-info-link {
+  font-size: 1rem;
+  margin: 0px;
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 1rem 2rem;
+  text-align: left;
+  border-left: 1px solid rgb(223, 225, 230);
+  border-right: 1px solid rgb(223, 225, 230);
+  border-bottom: 1px solid rgb(223, 225, 230);
+}
+
+@media only screen and (min-width: 768px) {
+  .plan-name {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+  }
+}
+
+.plan-price {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+.price-currency {
+  font-size: 1rem;
+}
+
+.price-detail {
+  color: rgb(80, 95, 121);
+  font-size: 0.75rem;
+  margin: 0px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 0px;
+  padding-top: 1.5rem;
+}
+
+.description-p {
+  margin: 0;
+}
+
+.description-calculation {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.description-calculation input[type="range"] {
+  appearance: none;
+  margin: 1.75rem 0px 0.75rem;
+  width: 100%;
+  background: #d3d3d3;
+  height: 0.5rem;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+/* .description-calculation input[type="range"]::-moz-range-thumb, .description-calculation input[type="range"]::-webkit-slider-thumb, .description-calculation input[type=”range”]::-ms-thumb {
+  border-radius: 50%;
+  color: #ffffff!important;
+  cursor: pointer;
+} */
+
+.description-calculation input[type="number"] {
+  appearance: textfield;
+  border-color: rgb(9, 30, 66);
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 0px 0px 1px;
+  color: rgb(9, 30, 66);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0px 0.25rem;
+  padding: 0px;
+  text-align: center;
+  width: 4.5rem;
+}
+
+.free-link {
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+.free-plan-link a,
+.free-plan-link>span {
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 184, 217);
+  font-size: 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  color: rgb(23, 43, 77) !important;
+}
+
+.free-plan-link-premium a,
+.free-plan-link-premium>span {
+  background-color: rgb(230, 252, 255);
+}
+
+.plan-info-link a {
+  padding: 0px;
+}
+
+.link-buttonstyle a,
+.link-buttonstyle>span {
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  font-size: 1rem;
+  /* padding: 0.7rem 1rem 0.8rem; */
+}
+
+.link-buttonstyle a {
+  color: rgb(0, 82, 204);
+}
+
+/*****  Trello teams  *****/
+
+.trello-teams-wrapper {
+  padding: 1rem 1rem 5rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 575px) {
+  .trello-teams-wrapper {
+      padding: 0rem 1rem 3rem !important;
+    }
+}
+
+@media (min-width: 576px) {
+  .trello-teams-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .trello-teams-wrapper {
+    display: block;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+.trello-teams-info {
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .trello-teams-info {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .trello-teams-info {
+    display: block;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+} 
+
+@media (min-width: 992px) {
+  .trello-teams-info {
+    margin-left: 8.33333%;
+    display: block;
+    flex: 0 0 auto;
+    width: 83.3333%;
+  }
+}
+
+.trello-teams-info-responsive {
+      padding: 0;
+        position: relative;
+        scroll-margin-top: 72px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .trello-teams-info-responsive {
+    display: none;
+  }
+}
+
+.teams-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*****  Trello started  *****/
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .trello-started {
+    background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal;
+    color: rgb(255, 255, 255);
+  }
+
+    .trello-started-wrapper {
+      padding: 3rem 1rem!important;
+    }
+} 
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .trello-started {
+    background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .trello-started {
+    background: url(https://images.ctfassets.net/rz1oowkt5gyp/6Q4l8SJeMZGSu1m6W9vAjL/1021a10f6940ce44c50d0ffaefec223e/BigSwingFooterHeroGraphic__Left.svg) left center / contain no-repeat scroll padding-box border-box, url(https://images.ctfassets.net/rz1oowkt5gyp/7KsuX6srvRqJVzeAIdIzIb/da1a3319c278d251ecbd078fcffdcd23/BigSwingFooterHeroGraphic__Right.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal, normal;
+    color: rgb(255, 255, 255);
+  }
+} 
+
+@media (min-width: 1200px) {
+  .trello-started {
+    background: url(https://images.ctfassets.net/rz1oowkt5gyp/6Q4l8SJeMZGSu1m6W9vAjL/1021a10f6940ce44c50d0ffaefec223e/BigSwingFooterHeroGraphic__Left.svg) left center / contain no-repeat scroll padding-box border-box, url(https://images.ctfassets.net/rz1oowkt5gyp/7KsuX6srvRqJVzeAIdIzIb/da1a3319c278d251ecbd078fcffdcd23/BigSwingFooterHeroGraphic__Right.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-blend-mode: normal, normal, normal;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.trello-started-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5.5rem 0;
+  text-align: center;
+}
+
+.trello-started-container .form-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .trello-started-container .form-container {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+  }
+} 
+
+@media (min-width: 768px) {
+  .trello-started-container .form-container {
+    flex-wrap: wrap;
+  }
+}
+
+.trello-started-container .form-input {
+  display: none;
+  font-size: 1rem;
+  padding: 0.7rem 0.75rem 0.8rem;
+  border: 1px solid rgb(223, 225, 230);
+  border-radius: 0.3rem;
+  max-width: 370px;
+  transition: all 250ms ease-out 0s;
+  width: 75%;
+}
+
+@media (min-width: 768px) {
+  .trello-started-container .form-input {
+    display: block;
+  }
+}
+
+.btn-signup {
+  display: inline-block;
+}
+
+@media (max-width: 767.98px) {
+  .btn-signup {
+    width: 100%;
+  }
+}
+
+.btn-signup button {
+  appearance: none;
+  align-items: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: all 250ms ease-out 0s;
+  text-decoration: none;
+  background-color: rgb(0, 101, 255);
+  border: 1px solid rgb(0, 101, 255);
+  font-size: 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  color: rgb(255, 255, 255) !important;
+}
+
+/*****  Trello footer  *****/
+.footer {
+  background-color: rgb(23, 43, 77);
+  color: rgb(255, 255, 255);
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-wrapper {
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.footer-logo-section {
+  padding: 1rem 1rem 0px;
+  position: relative;
+  scroll-margin-top: 72px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-logo-section {
+    display: block;
+    flex: 0 0 auto;
+    width: 16.6667%;
+  }
+}
+
+.footer-logo-row {
+  margin: 1.5rem 1rem 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-logo-row {
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    margin: 1rem 1rem 0px 0px;
+    gap: 1rem;
+  }
+}
+
+.logo-svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+.footer .footer-container svg {
+  max-width: 125px;
+}
+
+.footer-logo-login span {
+  font-size: 1rem;
+}
+
+.footer-info-section {
+  padding: 1rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-info-section {
+    display: block;
+    flex: 0 0 auto;
+    width: 83.3333%;
+  }
+}
+
+.footer .footer-container ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.footer-info-ul {
+  margin: 0px 0px 0px 1rem;
+}
+
+@media (min-width: 992px) {
+  .footer-info-ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+}
+
+.footer-info-ul li {
+  border-bottom: 1px solid rgb(80, 95, 121);
+  padding: 0px 0px 1rem;
+  margin: 0px 0px 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-info-ul li {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 25%;
+  }
+}
+
+.footer-info-ul li:first-child {
+  border-top: 1px solid rgb(80, 95, 121);
+  margin-top: 1rem;
+  padding: 1rem 0px;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-info-ul li:first-child {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.footer .footer-container a,
+.footer .footer-container button {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.footer-info-ul a {
+  margin: 0px;
+  padding: 0px;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-info-ul a {
+    padding: 1rem;
+    gap: 0.25rem;
+    height: 100%;
+  }
+}
+
+.footer-info-link {
+  display: block;
+  padding: 1rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.footer-info-ul p {
+  color: rgb(255, 255, 255);
+  width: 60%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-info-link-title {
+  color: rgb(23, 43, 77);
+  font-family: var(--font-family-text, "Charlie Text", sans-serif);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  padding-right: 0.3rem;
+  margin: 0px !important;
+  padding-bottom: 0.6rem !important;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-info-ul p {
+    width: 100%;
+  }
+}
+
+.footer-info-link-p {
+  color: rgb(80, 95, 121);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 0px !important;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-divider {
+    border-top: 1px solid rgb(80, 95, 121);
+    width: 98%;
+    margin: 0px auto;
+  }
+}
+
+.footer-bottom-wrapper {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.lang-col {
+  padding: 0px 1rem 1rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  width: 100%;
+  text-align: left;
+  margin-top: 0px;
+}
+
+@media (max-width:992px) {
+  .lang-col {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .lang-col {
+    display: block;
+    flex: 0 0 auto;
+    width: 16.6667%;
+    margin-top: 0px;
+    padding-top: 1rem;
+  }
+}
+
+.lang-form {
+  display: inline-block;
+  max-width: 100%;
+  min-height: 20px;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.lang-form select {
+  appearance: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' height='8' viewBox='0 0 13 8' width='13' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='m11.7305.59279c.3626.362629.3885.93447.0777 1.32699l-.0777.08722-4.99999 4.99999c-.36263.36263-.93446.38853-1.32697.0777l-.08725-.0777-4.999959-4.99997c-.3905249-.39052-.3905242-1.023685 0-1.414209.362629-.36263.934469-.388553 1.326989-.077728l.08722.077728 4.29292 4.292139 4.29284-4.29216c.3626-.36263.9345-.388532 1.327-.077707z' /%3E%3C/svg%3E");
+  background-position: right center;
+  background-repeat: no-repeat;
+  border: 0px;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lang-form::before {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' width='25px' height='24px' viewBox='0 0 25 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M2.33514634,13.0909091 C2.80456741,17.1674997 5.87382928,20.4918664 9.91593939,21.5020963 C8.18760918,19.0069673 7.13798566,16.119686 6.87807529,13.0909091 L2.33514634,13.0909091 Z M2.33514634,10.9090909 L6.8751035,10.9090909 C7.12988231,7.89470494 8.18079774,5.00118821 9.91557751,2.49799419 C5.87364609,3.50833206 2.8045534,6.83262197 2.33514634,10.9090909 Z M22.6648537,10.9090909 C22.1954326,6.83250032 19.1261707,3.50813364 15.0840606,2.49790374 C16.8123908,4.99303266 17.8620143,7.88031403 18.1219247,10.9090909 L22.6648537,10.9090909 Z M22.6648537,13.0909091 L18.1248965,13.0909091 C17.8701177,16.1052951 16.8192023,18.9988118 15.0844225,21.5020058 C19.1263539,20.4916679 22.1954466,17.167378 22.6648537,13.0909091 Z M9.15315078,10.9090909 L15.843646,10.9090909 C15.5581939,7.94925479 14.3973512,5.12935736 12.4999751,2.78265622 C10.595448,5.13778492 9.43302782,7.96652031 9.15315078,10.9090909 Z M15.8468492,13.0909091 L9.15635402,13.0909091 C9.44180608,16.0507452 10.6026488,18.8706426 12.5000249,21.2173438 C14.404552,18.8622151 15.5669722,16.0334797 15.8468492,13.0909091 Z M12.5,24 C5.59644063,24 0,18.627417 0,12 C0,5.372583 5.59644063,0 12.5,0 C19.4035594,0 25,5.372583 25,12 C25,18.627417 19.4035594,24 12.5,24 Z' %3E%3C/path%3E%3C/svg%3E%0A");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  bottom: 0px;
+  content: "";
+  left: 0px;
+  min-height: 20px;
+  min-width: 20px;
+  position: absolute;
+  top: 0px;
+}
+
+.copyright-col {
+  padding: 0px 1rem 1rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  text-align: center;
+  width: 100%;
+  margin-top: 0px;
+}
+
+@media only screen and (min-width: 992px) {
+  .copyright-col {
+    text-align: left;
+    display: block;
+    flex: 0 0 auto;
+    width: 58.3333%;
+    margin-top: 0px;
+    padding-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .copyright-nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.copyright-nav ul li {
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .copyright-nav ul li {
+    margin-right: 1.5rem;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .copyright-nav ul li:first-child {
+    margin-left: 1rem;
+  }
+}
+
+.copyright-nav ul li a,
+.copyright-nav ul li button,
+.copyright-nav ul li span {
+  font-size: 0.75rem;
+}
+
+.footer-cookie {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.social-col {
+  padding: 1rem;
+  position: relative;
+  scroll-margin-top: 72px;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .social-col {
+    display: block;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 1rem 0px;
+  padding: 0px 0px 3rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .social-links {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.social-links a {
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  height: 24px;
+  width: 24px;
+  margin: 0px !important;
+}
+
+.footer a svg {
+  height: 60%;
+  transition: all 0.15s ease 0s;
+  width: 60%;
+  margin: auto !important;
+}
+
+.footer a svg path {
+  fill: rgb(255, 255, 255);
+}
+
+@media (min-width: 576px) {
+  .trello-action-container .slick-dots {
+    max-width: 540px;
+  }
+} 
+
+@media (min-width: 768px) {
+  .trello-action-container .slick-dots {
+    max-width: 680px;
+  }
+} 
+
+@media (min-width: 1024px) {
+  .trello-action-container .slick-dots {
+    display: none;
+  }
+}
+
+.trello-action-container .slick-dots {
+  background-color: rgb(244, 245, 247);
+  border-radius: 0.5rem;
+  height: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.slick-dots .dot-each li.slick-active {
+  background-color: rgb(151, 160, 175);
+  border-radius: 0.5rem;
+  height: 1rem;
+  position: absolute;
+  transition: left 0.6s ease 0s;
+  width: 16.6667% !important;
+  opacity: 0.5;
+  left: 0%;
+}
+
+.slick-dots .dot-each .dot-li {
+  opacity: 0;
+}
+
+.slick-dots .dot-each li:nth-child(2) {
+  left: 16.6667%;
+}
+
+.slick-dots .dot-each li:nth-child(3) {
+  left: 33.3333%;
+}
+
+.slick-dots .dot-each li:nth-child(4) {
+  left: 50%;
+}
+
+.slick-dots .dot-each li:nth-child(5) {
+  left: 66.6667%;
+}
+
+.slick-dots .dot-each li:nth-child(6) {
+  left: 83.3333%;
 }
